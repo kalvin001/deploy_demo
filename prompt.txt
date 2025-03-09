@@ -1,0 +1,5 @@
+# 目标
+生成一个简单Hello World的demo 包括python后端、前端, 测试Vercel的部署, 
+
+# 要求
+1、使用全新的python环境进行测试 python -m venv deploy_demo_env
