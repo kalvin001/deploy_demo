@@ -1,6 +1,6 @@
 # Hello World Demo
 
-这是一个简单的Hello World演示项目，包括Python FastAPI后端和HTML/JS前端。项目设置为可以直接部署到Vercel。
+这是一个简单的Hello World演示项目，包括Python FastAPI后端和基于React+Ant Design框架的前端。项目设置为可以直接部署到Vercel。
 
 ## 项目结构
 
@@ -8,15 +8,17 @@
 deploy_demo/
 ├── api/                  # 后端API代码
 │   └── main.py           # FastAPI应用
-├── frontend/             # 前端代码
-│   └── index.html        # 主页面
+├── frontend-new/         # 前端代码 (React + Ant Design)
+│   ├── public/           # 静态文件
+│   ├── src/              # React源代码
+│   └── package.json      # 依赖配置
 ├── requirements.txt      # Python依赖
 └── vercel.json           # Vercel配置文件
 ```
 
 ## 本地开发
 
-### 设置环境
+### 后端设置
 
 1. 创建Python虚拟环境:
    ```
@@ -32,13 +34,29 @@ deploy_demo/
    pip install -r requirements.txt
    ```
 
-### 运行API服务
+4. 运行API服务:
+   ```
+   uvicorn api.main:app --reload
+   ```
+   API将在 http://localhost:8000 上运行。
 
-```
-uvicorn api.main:app --reload
-```
+### 前端设置
 
-API将在 http://localhost:8000 上运行。
+1. 进入前端目录:
+   ```
+   cd frontend-new
+   ```
+
+2. 安装依赖:
+   ```
+   npm install
+   ```
+
+3. 启动开发服务器:
+   ```
+   npm start
+   ```
+   前端将在 http://localhost:3000 上运行。
 
 ## Vercel部署
 
@@ -56,6 +74,18 @@ API将在 http://localhost:8000 上运行。
    ```
    vercel
    ```
+
+## 关于Ant Design框架
+
+本项目前端使用了Ant Design，这是一个企业级UI设计语言和React组件库。Ant Design提供了丰富的UI组件，使开发现代、美观的用户界面变得简单。
+
+主要特点:
+- 企业级设计系统
+- 丰富的高质量组件
+- 主题定制
+- 国际化支持
+
+了解更多: [Ant Design官网](https://ant.design/)
 
 ## API端点
 
